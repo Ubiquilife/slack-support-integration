@@ -1,0 +1,32 @@
+# Slack app manifest. Paste into https://api.slack.com/apps → "From manifest".
+display_information:
+  name: Ubiqui Support
+  description: Open a Ubiquilife Support ticket without leaving Slack.
+  background_color: "#1a1a2e"
+features:
+  bot_user:
+    display_name: Ubiqui Support
+    always_online: false
+  slash_commands:
+    - command: /support
+      url: https://YOUR-PUBLIC-HOST/slack/events
+      description: Open a Ubiquilife Support ticket
+      usage_hint: optional ticket title
+      should_escape: false
+oauth_config:
+  scopes:
+    bot:
+      - chat:write
+      - commands
+      - users:read
+settings:
+  event_subscriptions:
+    request_url: https://YOUR-PUBLIC-HOST/slack/events
+    bot_events:
+      - app_home_opened
+  interactivity:
+    is_enabled: true
+    request_url: https://YOUR-PUBLIC-HOST/slack/events
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

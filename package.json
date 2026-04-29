@@ -1,0 +1,18 @@
+{
+  "name": "@ubiquilife/slack-support-integration",
+  "version": "0.1.0",
+  "description": "Slack app: /support slash command opens a Block Kit modal that creates a ticket in Ubiquilife Support.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": "./src/index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.18.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
